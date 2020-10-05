@@ -1,0 +1,8 @@
+[template]
+src = "repository.xml.tmpl"
+dest = "/opt/pentaho-server/pentaho-solutions/system/jackrabbit/repository.xml"
+keys = [
+    "/postgres/host",
+    "/postgres/port",
+]
+
