@@ -1,0 +1,8 @@
+[template]
+src = "context.xml.tmpl"
+dest = "/opt/pentaho-server/tomcat/webapps/pentaho/META-INF/context.xml"
+keys = [
+    "/postgres/host",
+    "/postgres/port",
+]
+

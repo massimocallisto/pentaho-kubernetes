@@ -1,0 +1,8 @@
+[template]
+src = "postgresql.hibernate.cfg.xml.tmpl"
+dest = "/opt/pentaho-server/pentaho-solutions/system/hibernate/postgresql.hibernate.cfg.xml"
+keys = [
+    "/postgres/host",
+    "/postgres/port",
+]
+
