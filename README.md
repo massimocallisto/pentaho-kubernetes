@@ -30,7 +30,7 @@ ENV POSTGRES_PORT 6643
 You can change in `docker-compose.yml` the provided variables according to you environment.
 
 ## Kubernetes
-TODO
+Check `kubernetes` folder for instruction.
 
 ## TODO
 * Adding support for other Database systems
