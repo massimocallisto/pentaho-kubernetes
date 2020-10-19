@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ba-pentaho-deployment
+  labels:
+    app: ba-pentaho
+    role: bi-engine
+    type: deployment
+spec:
+  selector:
+    matchLabels:
+      app: ba-pentaho
+      role: bi-engine
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ba-pentaho
+        role: bi-engine
+    spec:
+      containers:
+        - name: ba-pentaho
+          image: massimocallisto/pentaho-kubernetes:1.0.0-beta
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: POSTGRES_HOST
+              value: ba-database-service
+            - name: POSTGRES_PORT
+              value: "5432"

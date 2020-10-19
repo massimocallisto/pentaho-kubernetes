@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: bim-platform
+spec:
+  #tls:
+  #  - hosts:
+  #    - identity.kube.lab
+  rules:
+  - host: platform.smartspace.it
+    http:
+      paths:
+      - path: /pentaho
+        backend:
+          serviceName: ba-pentaho-service
+          servicePort: 8080
+#      - path: /app
+#          serviceName: bim-app-service
+#          servicePort: 8081
+

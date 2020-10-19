@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ba-database-service
+  labels:
+    app: ba-database
+    role: database
+spec:
+  selector:
+   app: ba-database
+   role: database
+  ports:
+    - port: 5432
+      targetPort: 5432
+
